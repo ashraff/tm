@@ -6,19 +6,14 @@
 <meta charset="utf-8">
 <title>Task Manager</title>
 
-<meta name="viewport"
-	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
 
 <link href="<c:url value="/resources/r10/goldenjackal.css" />"
 	rel="stylesheet">
 <link href="http://fonts.googleapis.com/css?family=Bree+Serif"
 	rel="stylesheet">
 <link
-	href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,300,400,600,700'
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,700italic,300,400,600,700"
 	rel="stylesheet">
-
-<!--[if lt IE 9]><link href="/r10/damnyouGJ.css" rel="stylesheet"><script src="/r10/html5shiv.js"></script><![endif]-->
 
 </head>
 
@@ -101,6 +96,8 @@
 
 	</nav>
 
-<br><br><br>
+	<br>
+	<br>
+	<br>
 </body>
 </html>

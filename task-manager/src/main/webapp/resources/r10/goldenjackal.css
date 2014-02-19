@@ -89,19 +89,6 @@ a#home_link:hover:before {
 	background: url(crumb.gif) 9px 50% no-repeat;
 }
 
-article_footer {
-	max-width: 1180px;
-	margin-left: 150px;
-	position: relative; /* !!!!!!!!!!!!!!!!! */
-	xtop: 45px; /* !!!!!!!!!!!!!!!!! */
-	margin-top: 45px;
-	border-radius: 5px 0 0 5px;
-	z-index: 8;
-	background: white;
-	background: linear-gradient(transparent, #fff 2%, #fff 2%, #fff 99%, transparent 99%
-		);
-	box-shadow: 0 0 8px 2px rgba(0, 0, 0, .7);
-}
 
 article {
 	max-width: 1180px;
@@ -118,21 +105,21 @@ article {
 }
 
 /*---- Non-navigation text, etc. ----*/
-article,article_footer a {
+article a {
 	border-bottom: 1px solid #bfd9f1;
 	border-bottom: 1px solid rgba(0, 102, 204, .25);
 }
 
-article,article_footer a:hover,.feature a:hover {
+article a:hover,.feature a:hover {
 	border-color: #06c
 }
 
-article,article_footer img {
+article img {
 	float: left;
 	margin: 0 15px 15px 0;
 }
 
-article,article_footer em {
+article em {
 	font-weight: bold
 }
 

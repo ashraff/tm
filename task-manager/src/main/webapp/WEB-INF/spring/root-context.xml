@@ -9,7 +9,6 @@
 		class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
 		<property name="order"
 			value="#{T(org.springframework.core.Ordered).HIGHEST_PRECEDENCE}" />
-		<property name="favorPathExtension" value="true" />
 		<property name="contentNegotiationManager">
 			<bean class="org.springframework.web.accept.ContentNegotiationManager">
 				<constructor-arg>
@@ -37,11 +36,9 @@
 		<property name="order" value="#{contentNegotiatingResolver.order+1}" />
 	</bean>
 
-<!-- 	<bean id="viewResolver"
-		class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
-		<property name="basename" value="views" />
-		<property name="order" value="#{tilesViewResolver.order+1}" />
-	</bean> -->
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver"> 
+		<property name="basename" value="views" /> <property name="order" value="#{tilesViewResolver.order+1}" 
+		/> </bean> -->
 
 	<!-- Helper class to configure Tiles 3.x for the Spring Framework -->
 	<!-- See http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/servlet/view/tiles2/TilesConfigurer.html -->
