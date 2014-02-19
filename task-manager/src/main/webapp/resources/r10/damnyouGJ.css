@@ -1,0 +1,30 @@
+* { min-height: .1px }
+body { min-width: 620px }
+a#home_link { background-position: -9em -9em }
+header, #related { background-image: url(4to2.gif) }
+#main_nav a, #main_nav em { float: left; width: 150px }
+input#morombe { background: #fff }
+
+#dog_tag a, #dog_tag em {
+	left: 10px;
+	height: 89px;
+	padding: 15px 10px 0 10px;
+	background: url(dogtag_bg4.gif);
+}
+#dog_tag a:hover { padding-top: 15px }
+#dog_tag a:after, #dog_tag a:before, #dog_tag em:after, #dog_tag em:before, #dog_tag span { display: none }
+
+#flowerbreak {
+	border: solid #eee;
+	border-width: 0 0 1px 1px;
+	width: 339px;
+}
+#flower_primary, #flowers { width: 300px }
+body { padding-top: 45px }
+article { margin-top: 0 }
+
+#main_nav #tweet a {
+	background-position: 0 0;
+	width: 70px;
+	margin-left: 20px;
+}
