@@ -23,7 +23,7 @@
 
 
 </head>
-<article>
+<div class="content">
 	<header>
 		<h1>HTML Tutorials</h1>
 		<p>
@@ -120,10 +120,11 @@
 			<li><a href="advanced/embeddedcontent/">Embedded Content:
 					Video, Audio, and Canvas</a></li>
 		</ul> -->
-	
+		<table id="list4"></table>
 	</section>
-
-	<table id="list4"></table>
+	
+		
+	
 
 	<footer id="related">
 		<h2>Related pages</h2>
@@ -132,7 +133,7 @@
 			<li><a href="../javascript/">JavaScript Tutorials</a></li>
 		</ul>
 	</footer>
-</article>
+</div>
 
 
 
