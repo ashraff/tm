@@ -500,7 +500,7 @@ article .button {
 /*---- BLOCK: main_content, feature, related ----*/
 header,#related {
 	color: #fff;
-	padding: 1px 20px 20px 20px;
+	padding: 1px 5px 5px 5px;
 	background: #222 url(4to2lg.gif) 0 0 repeat-x;
 	background-size: 100% 100%;
 	background: #222 linear-gradient(#444, #222);
@@ -1323,8 +1323,8 @@ input#morombe:focus {
 		margin: 30px -10px -20px -10px
 	}
 	header,#main_content,#related,.feat2,.shot div,pre {
-		padding-left: 10px;
-		padding-right: 10px;
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 	h1,article h2,article p,article h3 {
 		margin-left: 10px;
