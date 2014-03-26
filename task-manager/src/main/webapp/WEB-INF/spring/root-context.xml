@@ -5,6 +5,8 @@
 	       		 http://www.springframework.org/schema/context 
     	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<import resource="classpath:spring/DataSource.xml" />
+	<import resource="classpath:spring/caching.xml" />
+
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<!-- Views mapped in views.properties (PDF, XLS classes, and others) -->
 	<bean id="contentNegotiatingResolver"
@@ -54,5 +56,11 @@
 		</property>
 	</bean>
 
+
+
 	<context:component-scan base-package="net.ashraff.taskmanager.dao.impl" />
+	<context:component-scan base-package="net.ashraff.taskmanager.service.impl" />
+	<context:component-scan base-package="com.github.markserrano.jsonquery.jpa.service" />
+
+
 </beans>

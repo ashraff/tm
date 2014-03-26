@@ -11,6 +11,8 @@
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu"/>
+
 <link href="<c:url value="/resources/jquery/css/start/ui.jqgrid.css" />"
 	rel="stylesheet" />
 
@@ -27,14 +29,30 @@
 	type="text/javascript"></script>
 
 <script
+	src="<c:url value="/resources/jquery/js/i18n/grid.locale-en.js" />"
+	type="text/javascript"></script>
+
+<script
 	src="<c:url value="/resources/jquery/js/jquery.jqGrid.min.js" />"
 	type="text/javascript"></script>
 
- <script type="text/javascript" src="<c:url value="/resources/dojo/dojo.js" />"> </script>
- <script type="text/javascript" src="<c:url value="/resources/spring/Spring.js" />"> </script>
- <script type="text/javascript" src="<c:url value="/resources/spring/Spring-Dojo.js" />"> </script>
- <script type="text/javascript" src="<c:url value="/resources/r10/js/treemenu.js" />"> </script>
-  
+<script type="text/javascript"
+	src="<c:url value="/resources/dojo/dojo.js" />">
+	
+</script>
+<script type="text/javascript"
+	src="<c:url value="/resources/spring/Spring.js" />">
+	
+</script>
+<script type="text/javascript"
+	src="<c:url value="/resources/spring/Spring-Dojo.js" />">
+	
+</script>
+<script type="text/javascript"
+	src="<c:url value="/resources/r10/js/treemenu.js" />">
+	
+</script>
+
 <!--[if lt IE 9]><link href="<c:url value="/resources/r10/damnyouGJ.css" />" rel="stylesheet"><script src="<c:url value="/resources/r10/js/html5shiv.js" />"></script><![endif]-->
 
 </head>

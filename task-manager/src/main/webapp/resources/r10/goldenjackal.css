@@ -5,13 +5,13 @@
 	float: none;
 	outline: 0;
 	font-style: normal;
-	border: none;
 }
 
-body {
-	font: 400 14px/21px "Open Sans", "Helvetica Neue", Helvetica, Arial,
+.ui-jqgrid .ui-jqgrid-view,.ui-widget, body {
+	font: 400 12px/21px "Open Sans", "Helvetica Neue", Helvetica, Arial,
 		sans-serif
-}
+} 
+
 
 body,#dog_tag span span {
 	background: #345 url(bg.gif) 0 0 fixed;
@@ -995,6 +995,11 @@ input#morombe:focus {
 #access_nav,#access_top {
 	display: none
 } /* !!!!!!!!!!!!!!!!! */
+
+
+.buttonpanel {
+  padding: 10px 0px 10px 0px;
+}
 
 /*---- media queries ----*/
 @media screen and (max-device-width : 1024px) {

@@ -16,5 +16,9 @@
 		<put-attribute name="content" value="/WEB-INF/views/content2.jsp" />
 	</definition>
 
+	<definition name="resource" extends="defaultTemplate">
+		<put-attribute name="content" value="/WEB-INF/views/resource.jsp" />
+	</definition>
+
 
 </tiles-definitions>
