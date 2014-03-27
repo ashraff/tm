@@ -1,0 +1,84 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:lang="http://www.springframework.org/schema/lang"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+        http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- Hibernate session factory -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+
+		<property name="configLocation">
+			<value>
+				classpath:hibernate.cfg.xml
+			</value>
+		</property>
+
+		<property name="configurationClass">
+			<value>org.hibernate.cfg.AnnotationConfiguration</value>
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+			</props>
+		</property>
+
+		<property name="mappingResources">
+			<list>
+				<value>/net/ashraff/taskmanager/entities/Navigation.hbm.xml</value>
+				<value>/net/ashraff/taskmanager/entities/Project.hbm.xml</value>
+				<value>/net/ashraff/taskmanager/entities/Resource.hbm.xml</value>
+			</list>
+		</property>
+
+	</bean>
+
+
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<bean id="hibernateVendor"
+		class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"
+		p:showSql="false" />
+
+	<bean id="dataSource"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url"
+			value="jdbc:mysql://vm-84c8-d16e.nam.nsroot.net:3306/tm" />
+		<property name="username" value="tm" />
+		<property name="password" value="tm" />
+	</bean>
+
+	<util:map id="jpaPropertyMap">
+		<entry key="hibernate.hbm2ddl.auto" value="update" />
+		<entry key="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect" />
+	</util:map>
+
+	<util:list id="listOfEntities">
+		<value>/net/ashraff/taskmanager/entities/Navigation.hbm.xml</value>
+		<value>/net/ashraff/taskmanager/entities/Project.hbm.xml</value>
+		<value>/net/ashraff/taskmanager/entities/Resource.hbm.xml</value>
+	</util:list>
+	<!-- Declare a JPA entityManagerFactory -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+		p:jpaVendorAdapter-ref="hibernateVendor" p:jpaPropertyMap-ref="jpaPropertyMap"
+		p:dataSource-ref="dataSource" p:packagesToScan="net.ashraff.taskmanager.entities"
+		p:mappingResources-ref="listOfEntities" />
+
+	<tx:annotation-driven />
+</beans>

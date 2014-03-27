@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                                   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2014 8:20:25 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="net.ashraff.taskmanager.entities.Navigation" table="VW_NAVIGATION">
+		<id name="id" type="int">
+			<column name="ID" not-null="true" />
+			<generator class="assigned" />
+		</id>
+		<property generated="never" lazy="false" name="serviceId"
+			type="java.lang.Integer">
+			<column name="SERVICE" />
+		</property>
+		<property generated="never" lazy="false" name="parentId"
+			type="java.lang.Integer">
+			<column name="PARENT_ID" />
+		</property>
+		<property generated="never" lazy="false" name="userId"
+			type="java.lang.Integer">
+			<column name="USER_ID" />
+		</property>
+		<property generated="never" lazy="false" name="displayTxtId"
+			type="java.lang.String">
+			<column name="DISPLAY_TXT_ID" />
+		</property>
+		<property generated="never" lazy="false" name="tooltipTxtId"
+			type="java.lang.String">
+			<column name="TOOLTIP_TXT_ID" />
+		</property>
+		<property generated="never" lazy="false" name="url"
+			type="java.lang.String">
+			<column name="URL" />
+		</property>
+		<property generated="never" lazy="false" name="serviceName"
+			type="java.lang.String">
+			<column name="SERVICE_NAME" />
+		</property>
+		<property generated="never" lazy="false" name="action"
+			type="java.lang.String">
+			<column name="ACTION" />
+		</property>
+		<property generated="never" lazy="false" name="menuText"
+			type="java.lang.String" formula="COALESCE(MENU_TEXT,DISPLAY_TXT_ID)">
+		</property>
+		<property generated="never" lazy="false" name="menuTooltipText"
+			type="java.lang.String" formula="COALESCE(MENU_TOOLTIP_TEXT,TOOLTIP_TXT_ID)">
+		</property>
+
+		<property generated="never" lazy="false" name="selected"
+			type="java.lang.Integer">
+			<column name="SELECTED"/>
+		</property>
+		<property generated="never" lazy="false" name="menuOrder"
+			type="java.lang.Integer">
+			<column name="MENU_ORDER" />
+		</property>
+	</class>
+</hibernate-mapping>
