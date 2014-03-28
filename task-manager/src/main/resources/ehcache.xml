@@ -4,7 +4,7 @@
 	<diskStore path="java.io.tmpdir" />
 
 	<cache name="resource" maxBytesLocalHeap="10M" eternal="false"
-		timeToIdleSeconds="300" overflowToDisk="true" maxElementsOnDisk="1000" 
+		timeToIdleSeconds="300" overflowToDisk="true" maxElementsOnDisk="10000" 
 		memoryStoreEvictionPolicy="LRU" />
-
+	<sizeOfPolicy maxDepth="100" maxDepthExceededBehavior="abort"/> 
 </ehcache>

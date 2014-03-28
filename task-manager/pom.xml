@@ -16,6 +16,11 @@
 		<webflow.version>2.3.2.RELEASE</webflow.version>
 		<querydsl.version>3.3.1</querydsl.version>
 		<spring.data.jpa.version>1.5.0.RELEASE</spring.data.jpa.version>
+		<net.sf.ehcache.version>2.7.4</net.sf.ehcache.version>
+		<mysql.connector.version>5.1.29</mysql.connector.version>
+		<hibernate.version>3.3.2.ga</hibernate.version>
+		<jackson.core.version>2.2.3</jackson.core.version>
+		<log4j.version>1.2.15</log4j.version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -71,19 +76,19 @@
 		<dependency>
 			<groupId>net.sf.ehcache</groupId>
 			<artifactId>ehcache</artifactId>
-			<version>2.7.4</version>
+			<version>${net.sf.ehcache.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.29</version>
+			<version>${mysql.connector.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>3.3.2.ga</version>
+			<version>${hibernate.version}</version>
 			<!-- will come with Hibernate core <exclusions> <exclusion> <artifactId>cglib</artifactId> 
 				<groupId>cglib</groupId> </exclusion> </exclusions> -->
 		</dependency>
@@ -91,22 +96,22 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
-			<version>2.2.3</version>
+			<version>${jackson.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>2.2.3</version>
+			<version>${jackson.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-annotations</artifactId>
-			<version>2.2.3</version>
+			<version>${jackson.core.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.datatype</groupId>
 			<artifactId>jackson-datatype-joda</artifactId>
-			<version>2.2.3</version>
+			<version>${jackson.core.version}</version>
 		</dependency>
 
 		<!-- AspectJ -->
@@ -137,7 +142,7 @@
 		<dependency>
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
-			<version>1.2.15</version>
+			<version>${log4j.version}</version>
 			<exclusions>
 				<exclusion>
 					<groupId>javax.mail</groupId>

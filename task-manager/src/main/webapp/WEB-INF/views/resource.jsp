@@ -33,7 +33,8 @@
 				pager : '#pagination',
 				rowList : [20, 40, 60],
 				colNames : ['Soe Id', 'Name', 'Email', 'Primary Skill',
-						'Sec. Skill', 'Add. Skill', 'Projects', 'Version'],
+						'Sec. Skill', 'Add. Skill', 'Projects', 'Start Date',
+						'End Date', 'Version'],
 				colModel : [{
 					name : 'soeId',
 					index : 'soeId',
@@ -141,6 +142,34 @@
 					editable : true,
 					search : false
 				}, {
+					name : 'dateStart',
+					index : 'dateStart',
+					width : 80,
+					align : "right",
+					editable : true,
+					formoptions : {
+						colpos : 1,
+						rowpos : 5
+					},
+					editrules:{date:true, minValue:0}, 
+					editoptions:{dataInit: function (elem) {$(elem).datepicker({dateFormat:"yy-MM-dd"});}},
+					datefmt:'y-M-d',
+					search : true
+				}, {
+					name : 'dateEnd',
+					index : 'dateEnd',
+					width : 80,
+					align : "right",
+					editable : true,					
+					formoptions : {
+						colpos : 2,
+						rowpos : 5
+					},
+					editrules:{date:true, minValue:0}, 
+					editoptions:{dataInit: function (elem) {$(elem).datepicker({dateFormat:"yy-MM-dd"});}}, 
+					datefmt:'y-M-d',
+					search : true
+				}, {
 					name : 'versionNo',
 					index : 'versionNo',
 					hidden : true,
@@ -197,7 +226,7 @@
 	});
 	$("#addrow").click(function() {
 		jQuery("#resourcelist").jqGrid('editGridRow', "new", {
-			height : 335,
+			height : 400,
 			width : 600,
 			reloadAfterSubmit : true,
 			ajaxEditOptions : jsonOptions,

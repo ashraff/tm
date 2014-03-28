@@ -9,8 +9,8 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 		/WEB-INF/spring/root-context.xml
-		<!-- /WEB-INF/spring/mvc/rest-json-converter-context.xml
-		/WEB-INF/spring/mvc/rest-json-type-converter-context.xml -->
+		/WEB-INF/spring/mvc/rest-json-converter-context.xml
+		/WEB-INF/spring/mvc/rest-json-type-converter-context.xml
 		</param-value>
 	</context-param>
 

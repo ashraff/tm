@@ -1,11 +1,13 @@
 package net.ashraff.taskmanager.entities;
 
 import java.io.Serializable;
-import java.sql.Timestamp;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
 import javax.persistence.Transient;
+
+import net.sf.ehcache.pool.sizeof.annotations.IgnoreSizeOf;
 
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -20,18 +22,21 @@ public class Resource implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 6284978333138145249L;
-	Integer id;
-	String resourceName;
-	String resourceEmail;
-	String primarySkill;
-	String secondarySkill;
-	String tertiarySkill;
-	String soeId;
+	private Integer id;
+	private String resourceName;
+	private String resourceEmail;
+	private String primarySkill;
+	private String secondarySkill;
+	private String tertiarySkill;
+	private String soeId;
 	@Transient
-	String projectListAsString;
+	private String projectListAsString;
+	@IgnoreSizeOf 
 	@JsonManagedReference
-	Set<Project> project = new HashSet<Project>(0);
-	Integer versionNo;
+	private Set<Project> project = new HashSet<Project>(0);
+	private Integer versionNo;
+	private Date dateStart;
+	private Date dateEnd;
 
 	public Resource() {
 
@@ -107,6 +112,22 @@ public class Resource implements Serializable {
 
 	public void setProject(Set<Project> project) {
 		this.project = project;
+	}
+
+	public Date getDateStart() {
+		return dateStart;
+	}
+
+	public void setDateStart(Date dateStart) {
+		this.dateStart = dateStart;
+	}
+
+	public Date getDateEnd() {
+		return dateEnd;
+	}
+
+	public void setDateEnd(Date dateEnd) {
+		this.dateEnd = dateEnd;
 	}
 
 	public Integer getVersionNo() {

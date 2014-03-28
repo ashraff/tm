@@ -35,7 +35,7 @@ import com.github.markserrano.jsonquery.jpa.mapper.JsonObjectMapper;
  */
 public class DateTimeUtil {
 
-	public static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("yyyy-MM-dd");
+	public static SimpleDateFormat SIMPLE_DATE_FORMAT = new SimpleDateFormat("dd/MM/yyyy");
 	public static TimeZone TIMEZONE = new DateTime().getZone().toTimeZone();
 	
 	public static DateTime getDateTimeWithOffset(DateTime dt) {
